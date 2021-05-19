@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>Registrati</title>
 <link rel="stylesheet"
 	href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
 	integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
@@ -13,7 +13,7 @@
 <body>
 	<div class="container">
 		<div class="row justify-content-center">
-			<form class="col-6" action="FirstServlet" method="get">
+			<form class="col-6" action="FirstServlet" method="post">
 				<h1>Ciao benvenuto registrati</h1>
 				<div class="mb-3">
 					<label for="exampleFormControlInput1" class="form-label">Nome</label>
@@ -30,6 +30,12 @@
 						address</label> <input type="email" class="form-control"
 						id="exampleFormControlInput1" placeholder="name@example.com"
 						name="posta">
+				</div>
+				<div class="mb-3">
+					<label for="exampleFormControlInput1" class="form-label">Submit button</label>
+					 <input type="submit" class="form-control"
+						id="exampleFormControlInput1" placeholder=""
+						name="">
 				</div>
 			</form>
 		</div>

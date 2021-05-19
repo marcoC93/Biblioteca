@@ -5,12 +5,14 @@ public class Libro {
 	private String title;
 	private String author;
 	private String genre;
-	private String isbn;
+	private int isbn;
+	private int id;
 
 	public Libro () {}
 	
-	public Libro (String title, String author, String genre, String isbn) {
+	public Libro (int id , String title, String author, String genre, int isbn) {
 		
+		this.id = id;
 		this.title = title;
 		this.author = author;
 		this.genre = genre;
@@ -43,11 +45,21 @@ public class Libro {
 		this.genre = genre;
 	}
 
-	public String getIsbn() {
+	public int getIsbn() {
 		return isbn;
 	}
 
-	public void setIsbn(String isbn) {
+	public void setIsbn(int isbn) {
 		this.isbn = isbn;
 	}
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+
 }

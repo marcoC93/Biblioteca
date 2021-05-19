@@ -1,8 +1,7 @@
-package Model;
 
 
 import java.io.IOException;
-import java.io.PrintWriter;
+import java.sql.SQLException;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -10,19 +9,23 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import Model.Libro;
+import databaseconnection.LibroDAO;
+import databaseconnection.LibroDAOImpl;
 /**
- * Servlet implementation class Utente
+ * Servlet implementation class ModificaLibro
  */
-@WebServlet("/Utente")
-public class Utente extends HttpServlet {
+@WebServlet("/ModificaLibro")
+public class ModificaLibro extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-
-	/**
-	 * Default constructor. 
-	 */
-	public Utente() {
-		// TODO Auto-generated constructor stub
-	}
+       
+    /**
+     * @see HttpServlet#HttpServlet()
+     */
+    public ModificaLibro() {
+        super();
+        // TODO Auto-generated constructor stub
+    }
 
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
@@ -37,50 +40,23 @@ public class Utente extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		//		doGet(request, response);
-
-		PrintWriter out = response.getWriter();
-
-		String name =  request.getParameter("nome");
-		if (name != null && !name.equals("")) {
-			out.println(name);
+		doGet(request, response);
+		
+		Libro libro = new Libro();
+		
+		int id = Integer.parseInt(request.getParameter("idLibro"));
+		libro.setId(id);
+		
+		LibroDAO libroDAO = new LibroDAOImpl() ;
+		
+		
+		
+		try {
+			libroDAO.updateLibro(libro);
 		}
-		else {
-			out.println("Username non corretta");
-		}
-
-
-
-		String password = request.getParameter("password");
-		if (password != null && !password.equals("")) {
-
-			out.println(password);
-
-		}
-		else {
-			out.println("password non corretta");
-		}
-
-
-		//			
-
-		//			
-
-		if(name.equals("maria" ) && password.equals("maria")) {
-
-			response.sendRedirect("dashboard.jsp") ;
-
-		}
-		else {
-
-			response.sendRedirect("RicercaLibro.jsp");
-
+		catch(SQLException e) {
+			e.printStackTrace();
 		}
 	}
 
-
-
-
 }
-
-

@@ -13,7 +13,7 @@
 <body>
 	<div class="container">
 		<div class="row justify-content-center">
-			<form class="col-6" action="FirstServlet" method="post">
+			<form class="col-6" action="InserisciLibro" method="post">
 				<h1>Ciao benvenuto registra il tuo libro</h1>
 				<div class="mb-3">
 					<label for="exampleFormControlInput1" class="form-label">Titolo</label>
@@ -37,7 +37,7 @@
 
 				<div class="mb-3">
 					<label for="exampleFormControlInput1" class="form-label">Isbn</label>
-					<input type="text" class="form-control" name="isbn"
+					<input type="number" class="form-control" name="isbn"
 						id="exampleFormControlInput1">
 				</div>
 

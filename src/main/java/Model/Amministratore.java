@@ -8,7 +8,7 @@ public class Amministratore  extends Utente{
 
 	public Amministratore(String username, String password,String code) {
 		
-		super(username,password);
+		super();
 		this.code = code;
 	}
 
