@@ -38,26 +38,20 @@
 						%>
 						<tr>
 							<td scope="row">
-								<%= libro.getTitle()  %>
+								<%=libro.getTitle()%>
 							</td>
 							<td>
-								<%=
-								libro.getAuthor() 
-								%>
+								<%=libro.getAuthor()%>
 							</td>
 							<td>
-								<%=
-								libro.getGenre() 
-								%>
+								<%=libro.getGenre()%>
 							</td>
 							<td>
-								<%=
-								libro.getIsbn() 
-								%>
+								<%=libro.getIsbn()%>
 							</td>
 							<td>
 								<form action="ModificaLibro" method="post">
-									<input type="hidden" name="id" value="<%libro.getId() ;  %>">
+									<input type="hidden" name="id" value="<%= libro.getId() %>">
 									<button type="submit" class="btn btn-black">Modifica</button>
 								</form>	
 							</td>

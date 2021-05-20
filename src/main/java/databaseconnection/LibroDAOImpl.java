@@ -53,13 +53,15 @@ public class LibroDAOImpl implements LibroDAO {
 			int id = resultSet.getInt("id");
 			String title = resultSet.getString("title");
 			String author = resultSet.getString("author");
-			
+			String genre = resultSet.getString("genre");
+			int isbn = resultSet.getInt("isbn");
 			
 			Libro Libro = new Libro();
 			Libro.setId(id);
 			Libro.setTitle(title);
 			Libro.setAuthor(author);
-//			Libro.setPrice(price);
+			Libro.setGenre(genre);
+			Libro.setIsbn(isbn);
 //			Libro Libro = new Libro(id, title, author, price);
 			listLibro.add(Libro);
 		}
@@ -87,15 +89,15 @@ public class LibroDAOImpl implements LibroDAO {
 	}
 
 	public boolean updateLibro(Libro Libro) throws SQLException {
-		String sql = "UPDATE Libro SET title = ?, author = ?, price = ?";
+		String sql = "UPDATE Libro SET title = ?, author = ?";
 		sql += " WHERE Libro_id = ?";
 		Connection jdbcConnection = DatabaseConnection.connect();
 
 		PreparedStatement statement = jdbcConnection.prepareStatement(sql);
 		statement.setString(1, Libro.getTitle());
 		statement.setString(2, Libro.getAuthor());
-//		statement.setFloat(3, Libro.getPrice());
-		statement.setInt(4, Libro.getId());
+
+		statement.setInt(3, Libro.getId());
 
 		boolean rowUpdated = statement.executeUpdate() > 0;
 		statement.close();
