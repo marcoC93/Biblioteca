@@ -43,22 +43,17 @@ public class RimuoviLibro extends HttpServlet {
 		// TODO Auto-generated method stub
 
 		String idInput = request.getParameter("idLibro") ;
+		
+		response.getWriter().append(request.getParameter("idLibro"));
+		
 		Libro libro = new Libro();
+		
 		int idNum =  Integer.parseInt(idInput);
 		
-//		try {
-//			 
-//		}
-//		catch (NumberFormatException e) {
-//			
-//			
-//		}
-		
+			
 		libro.setId(idNum);
 		
-		
-	
-				
+					
 		LibroDAO libroDAO = new LibroDAOImpl() ;
 		
 		try {
@@ -69,7 +64,7 @@ public class RimuoviLibro extends HttpServlet {
 		}
 		RequestDispatcher requestDispatcher = request.getRequestDispatcher("ListaLibri.jsp");
 		requestDispatcher.forward(request, response);
-		response.getWriter().append("Libro rimosso");
+		
 	}
 
 	

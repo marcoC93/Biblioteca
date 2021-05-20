@@ -51,12 +51,13 @@
 							</td>
 							<td>
 								<form action="ModificaLibro" method="post">
-									<input type="hidden" name="id" value="<%= libro.getId() %>">
+									<input type="hidden" name="idLibro" value="<%= libro.getId() %>">
 									<button type="submit" class="btn btn-black">Modifica</button>
 								</form>	
 							</td>
 							<td>
 								<form action="RimuoviLibro" method="post">		
+									<input type="hidden" name="idLibro" value="<%= libro.getId() %>">
 									<button type="submit" class="btn btn-danger">Delete</button>
 								</form>
 							</td>
