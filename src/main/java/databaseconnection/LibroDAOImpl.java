@@ -90,7 +90,7 @@ public class LibroDAOImpl implements LibroDAO {
 
 	public boolean updateLibro(Libro Libro) throws SQLException {
 		String sql = "UPDATE Libro SET title = ?, author = ?";
-		sql += " WHERE Libro_id = ?";
+		sql += " WHERE id = ?";
 		Connection jdbcConnection = DatabaseConnection.connect();
 
 		PreparedStatement statement = jdbcConnection.prepareStatement(sql);
@@ -107,7 +107,7 @@ public class LibroDAOImpl implements LibroDAO {
 
 	public Libro getLibro(int id) throws SQLException {
 		Libro libro = null;
-		String sql = "SELECT * FROM Libro WHERE Libro_id = ?";
+		String sql = "SELECT * FROM Libro WHERE id = ?";
 
 		Connection jdbcConnection = DatabaseConnection.connect();
 

@@ -50,7 +50,7 @@
 								<%=libro.getIsbn()%>
 							</td>
 							<td>
-								<form action="ModificaLibro" method="post">
+								<form action="modificaLibro.jsp" method="post">
 									<input type="hidden" name="idLibro" value="<%= libro.getId() %>">
 									<button type="submit" class="btn btn-black">Modifica</button>
 								</form>	
