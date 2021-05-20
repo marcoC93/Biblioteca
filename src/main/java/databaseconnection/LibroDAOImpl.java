@@ -39,7 +39,7 @@ public class LibroDAOImpl implements LibroDAO {
 		return rowInserted;
 	}
 
-	public List<Libro> listAllLibri() throws SQLException {
+	public List<Libro> getAllLibri() throws SQLException {
 		List<Libro> listLibro = new ArrayList<>();
 
 		String sql = "SELECT * FROM Libro";
@@ -53,7 +53,7 @@ public class LibroDAOImpl implements LibroDAO {
 			int id = resultSet.getInt("id");
 			String title = resultSet.getString("title");
 			String author = resultSet.getString("author");
-			float price = resultSet.getFloat("price");
+			
 			
 			Libro Libro = new Libro();
 			Libro.setId(id);
@@ -193,12 +193,6 @@ public class LibroDAOImpl implements LibroDAO {
 	}
 
 	@Override
-	public List<Libro> getAllLibri() throws SQLException {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
 	public Libro getLibroByISBN(int ISBN) throws SQLException {
 		Libro Libro = new Libro();
 		String sql = "SELECT * FROM Libro WHERE isbn = ?";
@@ -219,4 +213,28 @@ public class LibroDAOImpl implements LibroDAO {
 		DatabaseConnection.disconnect();
 		return Libro;
 	}
-}
+//	@Override
+//	public List<Libro> getLibro(String title, String author, String genre, int ISBN) trows SQLException ;
+//		List<Libro> listlibro = new ArrayList<Libro>;
+//		String sql = "SELECT * FROM Libro WHERE 1=1 AND title = ? " ;
+//		if(title != null && !title.equals("")) {
+//			sql =sql + "AND title = ?" ;
+//		}
+//		if(author != null && !author.equals("")) {
+//			sql =sql + "AND author = ?" ;
+//		}
+//		if(genre != null && !author.equals("")) {
+//			sql =sql + "AND genre = ?" ;
+//		}
+//		if(isbnString != null && !isbnString.equals("")) {
+//			int isbn = Integer.parseInt(isbnString);
+//			if(isbn > 0 ) {
+//				sql =sql + "AND isbn = ?" ;
+//			}
+//			
+//		}
+//		Connection jdbcConnection = DatabaseConnection.connect();
+//		Prepared
+//}
+
+}	

@@ -12,6 +12,7 @@ public interface LibroDAO {
 	public List<Libro> getLibro(String title) throws SQLException;					// READ
 	public List<Libro> getLibro(String title, String author) throws SQLException; 	// READ
 	public List<Libro> getAllLibri() throws SQLException;					// READ
+	
 	public boolean updateLibro(Libro Libro) throws SQLException;				// UPDATE
 	public boolean deleteLibro(Libro Libro) throws SQLException;				// DELETE
 }

@@ -28,10 +28,10 @@
 				<div class="mb-3">
 					<label for="exampleFormControlInput1" class="form-label">Genere</label>
 					<select id="exampleFormControlInput1" name="genre">
-						<option>Thriller</option>
-						<option>Romantico</option>
-						<option>Avventura</option>
-						<option>Horror</option>
+						<option value="Thriller" >Thriller</option>
+						<option value="Romantico">Romantico</option>
+						<option value="Avventura">Avventura</option>
+						<option value="Horror">Horror</option>
 					</select>
 				</div>
 

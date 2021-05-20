@@ -61,4 +61,4 @@ public class RimuoviLibro extends HttpServlet {
 
 
 }
-// if (idString )
+// if (idString )\
