@@ -58,6 +58,8 @@ public class InserisciLibro extends HttpServlet {
 		catch(SQLException e) {
 			e.printStackTrace();
 		}
+		
+//		queste righe sono solo delle stampe che ho creato per capire cosa usciva in output a scopo debug
 		response.getWriter().append("Libro aggiunto");
 		response.getWriter().append(libro.getTitle()); 
 		response.getWriter().append(libro.getAuthor());

@@ -52,7 +52,7 @@
 							<td>
 								<form action="modificaLibro.jsp" method="post">
 									<input type="hidden" name="idLibro" value="<%= libro.getId() %>">
-									<button type="submit" class="btn btn-black">Modifica</button>
+									<button type="submit" class="btn btn-primary">Modifica</button>
 								</form>	
 							</td>
 							<td>

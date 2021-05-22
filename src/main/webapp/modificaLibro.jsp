@@ -49,10 +49,15 @@
 					<input type="number" class="form-control" name="isbn" value="<%=libro.getIsbn() %>"
 						id="exampleFormControlInput1">
 				</div>
-
 				<div class="mb-3">
-					<button type="submit" class="btn btn-primary btn-md" name="azione">Registrati</button>
+					<label for="exampleFormControlInput1" class="form-label"></label>
+					<input type="number" class="" name="id" value="<%=libro.getId() %>"
+						id="exampleFormControlInput1">
 				</div>
+				<div class="mb-3">
+					<button type="submit" class="btn btn-primary btn-md" name="azione">Aggiorna</button>
+				</div>
+				
 			</form>
 		</div>
 	</div>

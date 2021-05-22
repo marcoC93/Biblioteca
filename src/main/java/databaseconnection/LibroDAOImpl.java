@@ -88,16 +88,17 @@ public class LibroDAOImpl implements LibroDAO {
 		return rowDeleted;     
 	}
 
-	public boolean updateLibro(Libro Libro) throws SQLException {
-		String sql = "UPDATE Libro SET title = ?, author = ?";
+	public boolean updateLibro(Libro libro) throws SQLException {
+		String sql = "UPDATE Libro SET title = ?, author = ?,genre = ?, isbn = ?" ;
 		sql += " WHERE id = ?";
 		Connection jdbcConnection = DatabaseConnection.connect();
 
 		PreparedStatement statement = jdbcConnection.prepareStatement(sql);
-		statement.setString(1, Libro.getTitle());
-		statement.setString(2, Libro.getAuthor());
-
-		statement.setInt(3, Libro.getId());
+		statement.setString(1, libro.getTitle());
+		statement.setString(2, libro.getAuthor());
+		statement.setString(3, libro.getGenre());
+		statement.setInt(4, libro.getIsbn());
+		statement.setInt(5, libro.getId());
 
 		boolean rowUpdated = statement.executeUpdate() > 0;
 		statement.close();
