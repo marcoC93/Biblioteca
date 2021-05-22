@@ -65,7 +65,8 @@ public class ModificaLibro extends HttpServlet {
 		catch(SQLException e) {
 			e.printStackTrace();
 		}
-
+		RequestDispatcher requestDispatcher = request.getRequestDispatcher("ListaLibri.jsp");
+		requestDispatcher.forward(request, response) ;
 	}
 }	
 
