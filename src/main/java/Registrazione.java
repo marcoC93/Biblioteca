@@ -31,7 +31,7 @@ public class Registrazione extends HttpServlet {
 		
 		response.getWriter().append(request.getParameter("mail"));
 		response.getWriter().append(request.getParameter("password"));
-		
+		response.getWriter().append(request.getParameter("admin"));
 		
 		
 	}

@@ -1,6 +1,8 @@
 package Model;
 
-public class Amministratore  extends Utente{
+import Login;
+
+public class Amministratore  extends Login{
 
 	private String code;
 

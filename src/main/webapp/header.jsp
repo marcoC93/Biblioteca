@@ -18,8 +18,8 @@
         </form>
 
         <div class="text-end">
-          <button type="button" class="btn btn-outline-light me-2">Login</button>
-          <button type="button" class="btn btn-primary">Registrati</button>
+          <a href="<%="login.jsp"%>"  class="btn btn-outline-light me-2">Login</a>
+          <a href="<%="registrati.jsp"%>" class="btn btn-primary">Registrati</a>
         </div>
       </div>
     </div>

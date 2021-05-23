@@ -1,4 +1,4 @@
-package Model;
+
 
 
 import java.io.IOException;
@@ -14,13 +14,13 @@ import javax.servlet.http.HttpServletResponse;
  * Servlet implementation class Utente
  */
 @WebServlet("/Utente")
-public class Utente extends HttpServlet {
+public class Login extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	/**
 	 * Default constructor. 
 	 */
-	public Utente() {
+	public Login() {
 		// TODO Auto-generated constructor stub
 	}
 
