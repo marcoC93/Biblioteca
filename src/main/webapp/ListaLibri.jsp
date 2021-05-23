@@ -13,6 +13,9 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
 </head>
 <body>
+	<jsp:include page="header.jsp" >
+	<jsp:param value="" name=""/>
+	</jsp:include>
 	<div class="container">
 		<div class="row">
 			<div class="col-10">
@@ -75,6 +78,10 @@
 						</tr>
 					</tbody>
 				</table>
+				<form action="inserisciLibro.jsp" method="post">		
+									
+						<button type="submit" class="btn btn-success">Aggiungi</button>
+				</form>
 			</div>
 		</div>
 	</div>

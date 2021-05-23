@@ -11,28 +11,32 @@
 	crossorigin="anonymous">
 </head>
 <body>
+<jsp:include page="header.jsp">
+<jsp:param value="" name=""/>
+</jsp:include>
 	<div class="container">
 		<div class="row justify-content-center">
-			<form class="col-6" action="FirstServlet" method="post">
+			<form class="col-6" action="Registrazione" method="post">
 				<h1>Ciao benvenuto registrati</h1>
 				<div class="mb-3">
 					<label for="exampleFormControlInput1" class="form-label">Nome</label>
 					<input type="text" class="form-control"
 						id="exampleFormControlInput1" name="nome">
 				</div>
-				<div class="mb-3">
-					<label for="exampleFormControlInput1" class="form-label">Cognome</label>
-					<input type="text" class="form-control"
-						id="exampleFormControlInput1" name="cognome">
-				</div>
+				
 				<div class="mb-3">
 					<label for="exampleFormControlInput1" class="form-label">Email
 						address</label> <input type="email" class="form-control"
 						id="exampleFormControlInput1" placeholder="name@example.com"
-						name="posta">
+						name="mail">
 				</div>
 				<div class="mb-3">
-					<label for="exampleFormControlInput1" class="form-label">Submit button</label>
+					<label for="exampleFormControlInput1" class="form-label">Password</label>
+					<input type="password" class="form-control"
+						id="exampleFormControlInput1" name="password">
+				</div>
+				<div class="mb-3">
+					<label for="exampleFormControlInput1" class="form-label">Registrati</label>
 					 <input type="submit" class="form-control"
 						id="exampleFormControlInput1" placeholder=""
 						name="">

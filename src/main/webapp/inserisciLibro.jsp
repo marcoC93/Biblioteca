@@ -4,13 +4,13 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<link rel="stylesheet"
-	href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
-	integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
-	crossorigin="anonymous">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
 <title>Insert title here</title>
 </head>
 <body>
+<jsp:include page="header.jsp" >
+<jsp:param value="" name=""/>
+</jsp:include>
 	<div class="container">
 		<div class="row justify-content-center">
 			<form class="col-6" action="InserisciLibro" method="post">
@@ -42,7 +42,7 @@
 				</div>
 
 				<div class="mb-3">
-					<button type="submit" class="btn btn-primary btn-md" name="azione">Registrati</button>
+					<button type="submit" class="btn btn-success btn-md" name="azione">Aggiungi</button>
 				</div>
 			</form>
 		</div>
